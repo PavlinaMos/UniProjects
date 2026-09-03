@@ -52,6 +52,7 @@ void loop() {
   Serial.println(analogValue); //debug
 
   for (int i = 0; i < samples; i++) {
+  analogValue = analogRead(lm35);
   sum += analogValue;
   delay(10);  // Small delay between readings
 }
